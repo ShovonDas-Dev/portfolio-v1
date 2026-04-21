@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="text-3xl font-bold text-center">
+      <div className="font-poppins text-3xl text-center mt-10">
         {" "}
         Here will be My Portfolio website{" "}
       </div>

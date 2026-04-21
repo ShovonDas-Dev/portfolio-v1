@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 @import "tailwindcss";
+
+.font-monoton {
+  font-family: 'Monoton', cursive;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
