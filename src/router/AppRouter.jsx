@@ -3,7 +3,7 @@ import Home from '../pages/Home';
 import Blog from '../pages/Blog';
 
 
-function App() {
+function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;

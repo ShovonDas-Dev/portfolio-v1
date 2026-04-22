@@ -15,9 +15,9 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-gray-300">
-          <li className="font-bold hover:text-[#FFC15E] text-band"><Link>Services</Link></li>
-          <li className='font-bold hover:text-[#FFC15E]'><Link>Works </Link></li>
-          <li className='font-bold hover:text-[#FFC15E]'><Link to="/blog">Blog </Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link>Services</Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link>Works </Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link to="/blog">Blog </Link></li>
          
         </ul>
 
@@ -33,9 +33,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <ul className="mt-4 flex flex-col gap-4 text-gray-300 md:hidden">
-          <li className="font-bold hover:text-[#FFC15E] text-band"><Link>Services</Link></li>
-          <li className='font-bold hover:text-[#FFC15E]'><Link>Works </Link></li>
-          <li className='font-bold hover:text-[#FFC15E]'><Link to="/blog">Blog </Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link>Services</Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link>Works </Link></li>
+          <li className="font-bold hover:border-b-2 hover:border-band"><Link to="/blog">Blog </Link></li>
         </ul>
       )}
     </div>
