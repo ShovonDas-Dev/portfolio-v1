@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
+@theme {
+  --color-band: #FFC15E;
+  --color-bg: #1A1A1A;
+}
+
+@theme {
+  --color-band: #FFC15E;
+  --color-bg: #1A1A1A;
+}
+
 @import "tailwindcss";
 
 .font-monoton {
