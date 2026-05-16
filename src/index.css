@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-bg1: #292F36;
+  --color-bg2: #1A1E23;
+  --color-mint: #12F7D6;
+  --color-aqua: #98FAEC;
+  --color-gray: #43454D;  
+  --font-primary: 'ubuntu', sans-serif;
+  --font-secondary: 'ibm-plex-mono-thin', monospace;
+}
