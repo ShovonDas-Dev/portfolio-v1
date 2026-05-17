@@ -27,8 +27,8 @@ const StyledWrapper = styled.div`
   .mainbox {
     box-sizing: border-box;
     position: relative;
-    width: 230px;
-    height: 50px;
+    width: 200px;
+    height: 30px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -48,11 +48,11 @@ const StyledWrapper = styled.div`
   }
 
   .checkbox:checked ~ .mainbox {
-    width: 50px;
+    width: 30px;
   }
 
   .checkbox:checked ~ .mainbox .search_input {
-    width: 0;
+    width: 0px;
     height: 0px;
   }
 
@@ -75,7 +75,7 @@ const StyledWrapper = styled.div`
   .search_input {
     box-sizing: border-box;
     height: 100%;
-    width: 170px;
+    width: 150px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -101,7 +101,7 @@ const StyledWrapper = styled.div`
   .search_icon {
     box-sizing: border-box;
     fill: white;
-    font-size: 1.3em;
+    font-size: 1em;
   }`;
 
 export default Input;

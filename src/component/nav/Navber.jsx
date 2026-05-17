@@ -19,14 +19,14 @@ export default function Navbar() {
         </div>
 
         {/* ================= ডান পাশের এলিমেন্টসমূহ (সার্চ ও সোশ্যাল) ================= */}
-        <div className="flex items-center gap-6">
+        <div className="flex gap-4 md:gap-6 items-center">
 
           {/* ================= মাঝের মেনু (সব ডিসপ্লেতেই থাকবে, শুধু সাজানো আলাদা) ================= */}
-          <div className="flex items-center gap-4 md:gap-6 text-sm font-medium">
+          <div className="flex items-center gap-4 md:gap-6 text-sm font-secondary  ">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `text-${isActive ? "aqua" : "white"}  hover:text-mint transition-colors text-md md:text-lg`
+               ` ${isActive ? "text-aqua" : "text-white"} hover:text-mint font-primary transition-colors text-md  md:text-lg`
               }
             >
               Home
@@ -34,17 +34,17 @@ export default function Navbar() {
             <NavLink
               to="/blogs"
               className={({ isActive }) =>
-               `text-${isActive ? "aqua" : "white"}  hover:text-mint transition-colors text-md md:text-lg`
+               `${isActive ? "text-aqua" : "text-white"} hover:text-mint font-primary transition-colors text-md md:text-lg`
 
               }
-            >
+            >    
               Blogs
             </NavLink>
           </div>
           
           {/* সার্চ বার: বড় স্ক্রিনে ইনপুট দেখাবে, ছোট স্ক্রিনে (md এর নিচে) হাইড থাকবে */}
           <div className="hidden md:block">
-            <SearchBox />
+            <  SearchBox />
           </div>
          
 
