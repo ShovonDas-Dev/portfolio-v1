@@ -1,5 +1,7 @@
 import React from "react";
 import details from "../../Data/HeroData"
+import CountUp from "../../assets/Counter"
+
 import {
   FaCode,
   FaDownload,
@@ -8,12 +10,14 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-const Hero = () => {
+
+const Hero = ( ) => {
    const heroDetails = details[0].hero;
 
     
   return (
-    <section className="min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
+    <section>
+    <section className="pt-20 md:pt-24 min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
       <div className="max-w-7xl w-full grid lg:grid-cols-3 gap-10 items-center">
         
         {/* LEFT CARD */}
@@ -56,10 +60,15 @@ const Hero = () => {
             </div>
 
             {/* Button */}
-            <button className="mt-8 bg-white text-black px-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+            <a
+              href={heroDetails.cvLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Shovon_CV.pdf"
+              className="mt-8 bg-white text-black px-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
               Download CV
               <FaDownload />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -103,7 +112,7 @@ const Hero = () => {
               </div>
 
               <div>
-                <h2 className="text-mint text-4xl font-bold">4</h2>
+                <CountUp className="text-mint text-4xl font-bold"  from={0} to={2} />
                 <p className="text-sm text-gray-300">
                   Programming <br /> Language
                 </p>
@@ -118,7 +127,8 @@ const Hero = () => {
               </div>
 
               <div>
-                <h2 className="text-mint text-4xl font-bold">6</h2>
+                
+                <CountUp className="text-mint text-4xl font-bold"  from={10} to={4} />
                 <p className="text-sm text-gray-300">
                   Development <br /> Tools
                 </p>
@@ -133,7 +143,7 @@ const Hero = () => {
               </div>
 
               <div>
-                <h2 className="text-mint text-4xl font-bold">8</h2>
+                <CountUp className="text-mint text-4xl font-bold"  from={30} to={10} />
                 <p className="text-sm text-gray-300">
                   Years of <br /> Experience
                 </p>
@@ -142,6 +152,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+    </section>
+
+        
     </section>
   );
 };

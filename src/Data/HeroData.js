@@ -1,3 +1,4 @@
+import CV from "../../public/CV/CV-Shovon-(Web).pdf";
 const shovonData = [
     {
         navBar:{
@@ -19,6 +20,7 @@ const shovonData = [
             number:"+8801885944096",
             website:"www.shovondas.com",
             skills: ["HTML", "CSS", "JS", "REACT", "NODE", "EXPRESS"],
+            cvLink: CV
         }
     }
 ]

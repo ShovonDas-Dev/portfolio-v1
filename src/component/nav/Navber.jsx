@@ -1,11 +1,31 @@
 import { FaDiscord, FaGithub, FaInstagram, FaSearch } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import SearchBox from "../../assets/SearchBox"
+import { useEffect, useState } from "react";
 
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <nav className="bg-bg1 text-white px-4 py-4 md:px-8 border-b border-gray-800 font-secondary font-weight-thin">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        isScrolled
+          ? 'bg-transparent bg-[#010714]/100 shadow-lg backdrop-blur-md py-4'
+          : 'bg-transparent py-6'}`}
+    
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* ================= বাম পাশের লোগো ================= */}
