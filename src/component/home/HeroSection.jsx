@@ -17,12 +17,12 @@ const Hero = ( ) => {
     
   return (
     <section>
-    <section className="pt-20 md:pt-24 min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
+    <section className="pt-20 md:pt-20 min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
       <div className="max-w-7xl w-full grid lg:grid-cols-3 gap-10 items-center">
         
         {/* LEFT CARD */}
-        <div className="flex justify-center">
-          <div className="relative border-2 border-mint rounded-tl-[120px] rounded-br-[120px] p-8 w-[320px] bg-[#1f242d] shadow-[0_0_30px_rgba(0,255,255,0.15)]">
+        <div className="flex justify-center p-6">
+          <div className=" relative border-2 border-mint rounded-tl-[120px] rounded-br-[120px] p-8 w-[320px] bg-[#1f242d] shadow-[0_0_30px_rgba(0,255,255,0.15)]">
             
             {/* Profile */}
             <div className="flex flex-col items-center text-center">
@@ -32,7 +32,7 @@ const Hero = ( ) => {
                 className="w-24 h-24 rounded-full border-4 border-mint object-cover"
               />
 
-              <h2 className="text-3xl mt-4 font-semibold">{heroDetails.name}</h2>
+              <h2 className="text-2xl mt-4 font-semibold">{heroDetails.name}</h2>
 
               <p className="text-gray-400 text-sm mt-1">
                 {heroDetails.title}
@@ -78,7 +78,7 @@ const Hero = ( ) => {
 
           <p className="text-mint mb-3">&lt;h1&gt;</p>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Hey <br />
             I’m <span className="text-mint">Shovon,</span> <br />
             Full-Stack Developer

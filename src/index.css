@@ -10,3 +10,17 @@
   --font-primary: 'ubuntu', sans-serif;
   --font-secondary: 'ibm-plex-mono-thin', monospace;
 }
+
+@keyframes border-trace {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-border-line {
+  stroke-dasharray: 200; /* আলোর লাইনের দৈর্ঘ্য (বাড়িয়ে কমিয়ে দেখতে পারেন) */
+  animation: border-trace 6s linear infinite;
+}
