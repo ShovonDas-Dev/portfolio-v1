@@ -1,4 +1,4 @@
-import React from "react";
+
 import details from "../../Data/HeroData"
 import CountUp from "../../assets/Counter"
 
@@ -18,7 +18,7 @@ const Hero = ( ) => {
   return (
     <section>
     <section className="pt-20 md:pt-20 min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
-      <div className="max-w-7xl w-full grid lg:grid-cols-3 gap-10 items-center">
+      <div className="max-w-8xl w-full grid lg:grid-cols-3 gap-10 md:gap-0 items-center">
         
         {/* LEFT CARD */}
         <div className="flex justify-center p-6">
@@ -65,7 +65,7 @@ const Hero = ( ) => {
               target="_blank"
               rel="noopener noreferrer"
               download="Shovon_CV.pdf"
-              className="mt-8 bg-white text-black px-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+              className="mt-4 bg-white text-black px-6 w-[200px] py-3 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
               Download CV
               <FaDownload />
             </a>
@@ -74,7 +74,7 @@ const Hero = ( ) => {
 
         {/* MIDDLE CONTENT */}
         <div>
-          <h3 className="text-mint text-6xl mb-10">Developer</h3>
+          <h3 className="text-mint text-5xl mb-10">Developer</h3>
 
           <p className="text-mint mb-3">&lt;h1&gt;</p>
 

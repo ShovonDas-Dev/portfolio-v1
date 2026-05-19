@@ -4,10 +4,14 @@ import AboutMe from '../component/home/AboutMe'
 
 const Home = () => {
   return (
+<>
     <div>
         <HeroSection />
-        <AboutMe/>
     </div>
+    <div>
+      <AboutMe/>
+    </div>
+</>
   )
 }
 
