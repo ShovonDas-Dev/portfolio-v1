@@ -1,6 +1,7 @@
-import React from 'react'
+
 import HeroSection from '../component/home/HeroSection'
 import AboutMe from '../component/home/AboutMe'
+import Skills from "../component/home/Skills"
 
 const Home = () => {
   return (
@@ -10,6 +11,9 @@ const Home = () => {
     </div>
     <div>
       <AboutMe/>
+    </div>
+    <div>
+      <Skills/>
     </div>
 </>
   )
