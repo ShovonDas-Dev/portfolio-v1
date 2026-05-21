@@ -12,8 +12,10 @@ const Home = () => {
     <div>
       <AboutMe/>
     </div>
-    <div>
+    <div className='bg-bg1'>
+      <div className=' max-w-6xl center  mx-auto'>
       <Skills/>
+    </div>
     </div>
 </>
   )
