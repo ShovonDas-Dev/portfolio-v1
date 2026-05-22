@@ -5,7 +5,7 @@ import TailwindLogo from "../assets/OrbitLogo/tailwind.svg";
 import ReactLogo from "../assets/OrbitLogo/ReactLogo.svg";
 import NodeLogo from "../assets/OrbitLogo/Node.png";
 import MongoDBLogo from "../assets/OrbitLogo/MongoDB_idxmboBE0D_0.svg";
-import ExpressLogo from "../assets/OrbitLogo/ExpressJS_id74npXgk8_1.svg";
+import ExpressLogo from "../assets/OrbitLogo/Express.com.png";
 
 // Replace these URL with your own logo images
 const LOGO_PATHS = {
@@ -33,7 +33,7 @@ const orbits = [
     logos: [
       
       { img: LOGO_PATHS.mongodb, size: 40, initialOffset: 225 },
-        { img: LOGO_PATHS.node, size: 30, initialOffset: 45 },
+        { img: LOGO_PATHS.node, size: 30, initialOffset: 55 },
     ],
   },
 
@@ -49,12 +49,12 @@ const orbits = [
 
 const OrbitalAnimation = () => {
   return (
-    <div className="relative flex items-center justify-center min-h-screen overflow-hidden">
+    <div className="relative flex items-center justify-center min-h-screen   overflow-hidden">
       
       {/* Central Base Node */}
       <div className="absolute w-24 h-24 bg-black rounded-full border border-gray-700 flex items-center justify-center shadow-2xl z-10">
-        <span className="text-5xl font-mono font-black text-white transform -scale-x-100">
-          N
+        <span className="text-5xl font-mono font-black text-white transform ">
+          
         </span>
       </div>
 
@@ -85,8 +85,11 @@ const OrbitalAnimation = () => {
               key={logoIndex}
               className="absolute"
               style={{
-                width: `${logo.size}px`,
-                height: `${logo.size}px`,
+                top: '50%',
+                left: '50%',
+                width: 0,
+                height: 0,
+                transformOrigin: '0 0',
               }}
               // Orbital Animation Logic
               animate={{
@@ -96,17 +99,18 @@ const OrbitalAnimation = () => {
                 duration: orbit.duration,
                 ease: 'linear',
                 repeat: Infinity,
-                delay: -(orbit.initialOffset / 360) * orbit.duration, // Stagger initial positions
+                delay: -(logo.initialOffset / 360) * orbit.duration, // Stagger initial positions
               }}
             >
               {/* Actual Logo Image, offset from the center to its orbital path */}
               <div
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden p-1 shadow-md bg-[#0E121F]"
+                className="absolute rounded-full overflow-hidden p-1 shadow-md bg-[#0E121F]"
                 style={{
+                  width: `${logo.size}px`,
+                  height: `${logo.size}px`,
                   top: '50%',
-                  left: `${50 + (orbit.radius / logo.size) * 100}%`, // Position logo out from center
-                  width: '100%',
-                  height: '100%',
+                  left: `${orbit.radius}px`,
+                  transform: 'translate(-50%, -50%)',
                 }}
               >
                 {/* Counter-rotation to keep the logo upright */}

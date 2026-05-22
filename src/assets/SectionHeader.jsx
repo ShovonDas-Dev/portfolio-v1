@@ -2,7 +2,7 @@
 const SectionHeader = ({ title, subtitle , children }) => {
   return (
     <div className="section-header">
-      <div className="p-4">
+      <div className="pt-4">
         <div className="flex flex-col items-center mt-16 animate-bounce">
         {/* মাউস শেপ */}
         <div className="w-6 h-10 border-2 border-mint rounded-full flex justify-center p-1">
@@ -14,7 +14,7 @@ const SectionHeader = ({ title, subtitle , children }) => {
 
       </div>
        <div>
-        <div className=" flex flex-col items-center mb-16 ">
+        <div className=" flex flex-col items-center  ">
           <h1 className=" text-3xl font-bold text-mint font-primary text-center" >{title}</h1>
           <div className="flex">
             <div className="h-[10px] w-[10px] bg-mint mt-[12px] rounded-4xl"></div>
@@ -27,7 +27,7 @@ const SectionHeader = ({ title, subtitle , children }) => {
       </div>
 
       {/* ২. মেইন রেস্পন্সিভ গ্রিড কন্টেইনার */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"></div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12  items-center"></div>
     
     <div/>
     <div>

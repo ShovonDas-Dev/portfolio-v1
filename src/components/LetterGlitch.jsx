@@ -220,3 +220,21 @@ const LetterGlitch = ({
 };
 
 export default LetterGlitch;
+
+
+
+              {/* <div className=" w-full h-74 bg-[#1f242d] relative rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,255,255,0.15)] flex items-center justify-center">
+                <LetterGlitch
+                  glitchColors={[
+                    "#2b4539",
+                    "#61dca3",
+                    "#ffffff",
+                    "#ffffff",
+                    "#ffffff",
+                  ]}
+                  glitchSpeed={40}
+                  centerVignette
+                  outerVignette
+                  smooth
+                />
+              </div> */}
