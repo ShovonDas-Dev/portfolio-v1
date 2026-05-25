@@ -3,28 +3,14 @@ import { motion } from "framer-motion";
 
 import SectionHeader from "../../assets/SectionHeader";
 import OrbitalAnimation from "../../components/OrbitalAnimation";
-import ReactLogo from "../../assets/OrbitLogo/ReactLogo.svg";
-import NodeLogo from "../../assets/OrbitLogo/Node.png";
-import MongoDBLogo from "../../assets/OrbitLogo/MongoDB_idxmboBE0D_0.svg";
-import ExpressLogo from "../../assets/OrbitLogo/Express.com.png";
-import TailwindLogo from "../../assets/OrbitLogo/tailwind.svg";
-import NextjsLogo from "../../assets/OrbitLogo/nextjs.svg";
-import JavaScriptLogo from "../../assets/OrbitLogo/JavaScript.png";
-import TypeScriptLogo from "../../assets/OrbitLogo/ts-logo-round-128.png";
+import skills from "../../Data/skill";
+import CodeLogo from "../../assets/OrbitLogo/CodeLogo.png";
 
 // ✅ Skill Data
-const skills = [
-  { name: "JavaScript", percent: 90, color: "text-yellow-400", logo: JavaScriptLogo },
-  { name: "React", percent: 85, color: "text-aqua", logo: ReactLogo },
-  { name: "Node.js", percent: 80, color: "text-green-400", logo: NodeLogo },
-  { name: "MongoDB", percent: 75, color: "text-green-500", logo: MongoDBLogo },
-  { name: "Express", percent: 70, color: "text-gray-300", logo: ExpressLogo },
-  { name: "Tailwind", percent: 88, color: "text-sky-400", logo: TailwindLogo },
-  { name: "Next.js", percent: 78, color: "text-white", logo: NextjsLogo },
-  { name: "TypeScript", percent: 82, color: "text-blue-400", logo: TypeScriptLogo },
-];
+
 
 const Skills = () => {
+
   return (
     <div>
       <SectionHeader
@@ -34,13 +20,38 @@ const Skills = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT SIDE - ORBIT */}
-          <div className="flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          className="flex justify-center">
+            <div>
+              <motion.img
+                src={CodeLogo}
+                alt="Code Logo"
+                className="w-15 h-15 md:w-40 md:h-40  absolute sm:relative rounded-full flex items-center justify-center "
+                animate={{
+                  y: [0, -20, 0] 
+                }}
+                transition={{
+                  duration: 2, 
+                  repeat: Infinity, 
+                  ease: "easeInOut" 
+                }}
+              />
+            </div>
             <OrbitalAnimation />
-          </div>
+          </motion.div>
 
           {/* RIGHT SIDE - SKILLS */}
-          <div className="grid grid-cols-2    gap-3 p-5 sm:p-2">
-
+          <motion.div 
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          className="grid grid-cols-2    gap-3 p-5 sm:p-2">
+            
             {skills.map((skill, index) => (
               <div
                 key={index}
@@ -78,13 +89,13 @@ const Skills = () => {
                       duration: 1.2,
                       ease: "easeOut",
                       delay: index * 0.1,
-                    }}  
+                    }}
                   />
                 </div>
               </div>
             ))}
 
-          </div>
+          </motion.div>
         </div>
       </SectionHeader>
     </div>
