@@ -7,9 +7,9 @@ import ReactLogo from "../../assets/OrbitLogo/ReactLogo.svg";
 import NodeLogo from "../../assets/OrbitLogo/Node.png";
 import MongoDBLogo from "../../assets/OrbitLogo/MongoDB_idxmboBE0D_0.svg";
 import ExpressLogo from "../../assets/OrbitLogo/Express.com.png";
-import TailwindLogo from "../../assets/OrbitLogo/tailwind.svg";
-import NextjsLogo from "../../assets/OrbitLogo/nextjs.svg";
-import JavaScriptLogo from "../../assets/OrbitLogo/JavaScript.png";
+import TailwindLogo from "../../assets/OrbitLogo/Tailwind.svg";
+import NextjsLogo from "../../assets/OrbitLogo/Nextjs.svg";
+import JavaScriptLogo from "../../assets/OrbitLogo/Javascript.png";
 import TypeScriptLogo from "../../assets/OrbitLogo/ts-logo-round-128.png";
 
 // ✅ Skill Data
