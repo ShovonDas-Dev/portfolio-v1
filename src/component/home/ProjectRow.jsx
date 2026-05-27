@@ -1,27 +1,57 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import BrowserMockup from "../../assets/BrowserMockup";
+import Button from "../../assets/Button";
 
 /* ── Animation variants ── */
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
 };
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.15,
+    },
+  },
 };
 
 const fadeRight = {
   hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.15,
+    },
+  },
 };
 
 const ProjectRow = ({ project, index }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-80px",
+  });
+
   const isReverse = index % 2 !== 0;
+
   const num = String(index + 1).padStart(2, "0");
 
   return (
@@ -30,20 +60,42 @@ const ProjectRow = ({ project, index }) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={fadeUp}
-      className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
-        isReverse ? "lg:flex-row-reverse" : ""
-      }`}
+      className={`
+        relative
+        flex
+        flex-col
+        lg:flex-row
+        items-center
+        gap-10
+        lg:gap-16
+        py-10
+        md:py-15
+        ${isReverse
+          ? "lg:flex-row-reverse"
+          : ""
+        }
+      `}
     >
-      {/* ── Text side ── */}
+      {/* ───────────────── TEXT SIDE ───────────────── */}
       <motion.div
         variants={isReverse ? fadeRight : fadeLeft}
-        className="flex-1 w-full relative"
+        className="flex-1 w-full relative "
       >
-        {/* Big ghost number */}
+        {/* Ghost Number */}
         <span
-          className={`absolute top-[-5rem] font-bold text-[5rem] leading-none pointer-events-none select-none`}
+          className="
+            absolute
+            top-[-9rem]
+            text-[90px]
+            md:text-[120px]
+            font-extrabold
+            leading-none
+            pointer-events-none
+            select-none
+            text-mint/10
+            drop-shadow-[0_0_20px_rgba(18,247,214,0.08)]
+          "
           style={{
-            color: "rgba(167,139,250,0.06)",
             fontFamily: "'Syne', sans-serif",
             [isReverse ? "right" : "left"]: "-0.5rem",
           }}
@@ -53,69 +105,164 @@ const ProjectRow = ({ project, index }) => {
 
         {/* Label */}
         <p
-          className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-1"
-          style={{ color: project.color, fontFamily: "'Syne', sans-serif" }}
+          className="
+            text-[11px]
+            uppercase
+            tracking-[0.2em]
+            font-semibold
+            mb-2
+            text-mint
+            font-secondary
+          "
+          
         >
           {project.label}
         </p>
 
         {/* Title */}
         <h3
-          className="text-[#f0ecff] text-[2rem] font-bold leading-tight mb-4"
-          style={{ fontFamily: "'Syne', sans-serif" }}
+          className="
+            text-aqua
+            text-[2rem]
+            md:text-[2.4rem]
+            font-bold
+            leading-tight
+            mb-5
+            font-primary
+          "
         >
           {project.title}
         </h3>
 
-        {/* Description card */}
-        <div className="text-[#b4aed4] text-sm leading-[1.7] bg-white/[0.04] border border-[rgba(167,139,250,0.15)] rounded-lg px-5 py-4">
-          {project.desc}
+        {/* Description Card */}
+        <div
+          className="
+            relative
+            overflow-hidden
+            rounded-2xl
+            border
+            border-mint/15
+            bg-bg2/80
+            backdrop-blur-md
+            px-5
+            py-5
+            text-[#d1d5db]
+            leading-[1.8]
+            shadow-[0_0_25px_rgba(18,247,214,0.05)]
+            transition-all
+            duration-300
+            hover:shadow-[0_0_35px_rgba(18,247,214,0.12)]
+            hover:-translate-y-1
+          "
+        >
+          {/* Glow */}
+          <div
+            className="
+              absolute
+              -top-10
+              -right-10
+              w-32
+              h-32
+              bg-mint/10
+              blur-3xl
+              rounded-full
+            "
+          />
+
+          <p className="relative z-10 font-secondary text-sm">
+            {project.desc}
+          </p>
         </div>
 
-        {/* Tech badges */}
-        <div className="flex flex-wrap gap-2 mt-4">
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-3 mt-5">
           {project.tech.map((t) => (
-            <span
-              key={t}
-              className="text-[11px] font-medium px-2.5 py-[3px] rounded-full border border-[rgba(167,139,250,0.2)] bg-[rgba(167,139,250,0.12)] text-[#c4b5fd]"
-            >
-              {t}
-            </span>
+              <Button key={t.nam} name={t} />
           ))}
         </div>
 
-        {/* Links */}
-        <div className="flex gap-2.5 mt-5">
+        {/* Buttons */}
+        <div className="flex gap-4 mt-6">
+          {/* Live Demo */}
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-[12px] font-medium px-3.5 py-1.5 rounded-md border transition-colors duration-200 hover:bg-white/5"
-            style={{
-              borderColor: `${project.color}80`,
-              color: project.color,
-              background: `${project.color}22`,
-            }}
+            className="
+              px-5
+              py-2
+              rounded-xl
+              bg-mint
+              text-bg2
+              text-sm
+              font-semibold
+              shadow-[0_0_20px_rgba(18,247,214,0.2)]
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-[0_0_30px_rgba(18,247,214,0.35)]
+              font-primary
+            "
           >
             Live Demo
           </a>
+
+          {/* GitHub */}
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-[12px] font-medium px-3.5 py-1.5 rounded-md border border-[rgba(167,139,250,0.4)] text-[#c4b5fd] transition-colors duration-200 hover:bg-[rgba(167,139,250,0.1)]"
+            className="
+              px-5
+              py-2
+              rounded-xl
+              border
+              border-mint/40
+              text-mint
+              text-sm
+              font-semibold
+              bg-bg1/30
+              backdrop-blur-sm
+              transition-all
+              duration-300
+              hover:bg-mint
+              hover:text-bg2
+              hover:shadow-[0_0_25px_rgba(18,247,214,0.25)]
+              font-primary
+            "
           >
             GitHub
           </a>
         </div>
       </motion.div>
 
-      {/* ── Browser mockup side ── */}
+      {/* ───────────────── MOCKUP SIDE ───────────────── */}
       <motion.div
         variants={isReverse ? fadeLeft : fadeRight}
-        className="flex-[1.2] w-full"
+        className="
+          flex-[1.2]
+          w-full
+          relative
+        "
       >
-        <BrowserMockup preview={project.preview} color={project.color} />
+        {/* Glow */}
+        <div
+          className="
+            absolute
+            inset-0
+            bg-mint/10
+            blur-[120px]
+            rounded-full
+            scale-75
+          "
+        />
+
+        <div className="relative z-10">
+          <BrowserMockup
+            preview={project.preview}
+            color={project.color}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

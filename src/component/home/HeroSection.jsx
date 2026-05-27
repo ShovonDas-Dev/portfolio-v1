@@ -1,4 +1,5 @@
 
+import Button from "@/assets/Button";
 import details from "../../Data/HeroData"
 import CountUp from "../../assets/Counter"
 
@@ -50,12 +51,8 @@ const Hero = ( ) => {
             {/* Skills */}
             <div className="flex flex-wrap gap-3 mt-6">
               {heroDetails.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="border border-mint text-mint px-3 py-1 rounded-full text-xs"
-                >
-                  {skill}
-                </span>
+                <Button key={skill} name={skill} />
+                
               ))}
             </div>
 
@@ -107,7 +104,7 @@ const Hero = ( ) => {
           <div className="bg-[#1b2028] rounded-[50px] p-8 w-[240px] space-y-8 shadow-xl">
             
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint">
+              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint hover:bg-mint hover:text-bg2 transition-colors duration-300 ">
                 <FaCode />
               </div>
 
@@ -122,7 +119,7 @@ const Hero = ( ) => {
             <hr className="border-gray-700" />
 
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint">
+              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint hover:bg-mint hover:text-bg2 transition-colors duration-300  ">
                 <FaBriefcase />
               </div>
 
@@ -138,7 +135,7 @@ const Hero = ( ) => {
             <hr className="border-gray-700" />
 
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint">
+              <div className="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-mint hover:bg-mint hover:text-bg2 transition-colors duration-300  ">
                 <FaTrophy />
               </div>
 
