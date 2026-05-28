@@ -2,6 +2,7 @@
 import Button from "@/assets/Button";
 import details from "../../Data/HeroData"
 import CountUp from "../../assets/Counter"
+import { motion } from "framer-motion";
 
 import {
   FaCode,
@@ -22,7 +23,11 @@ const Hero = ( ) => {
       <div className="max-w-8xl w-full grid lg:grid-cols-3 gap-10 md:gap-0 items-center">
         
         {/* LEFT CARD */}
-        <div className="flex justify-center p-6">
+        <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+        className="flex justify-center p-6">
           <div className=" relative border-2 border-mint rounded-tl-[120px] rounded-br-[120px] p-8 w-[320px] bg-[#1f242d] shadow-[0_0_30px_rgba(0,255,255,0.15)]">
             
             {/* Profile */}
@@ -67,10 +72,14 @@ const Hero = ( ) => {
               <FaDownload />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* MIDDLE CONTENT */}
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+        className="text-center lg:text-left space-y-6">
           <h3 className="text-mint text-5xl mb-10">Developer</h3>
 
           <p className="text-mint mb-3">&lt;h1&gt;</p>
@@ -97,10 +106,14 @@ const Hero = ( ) => {
               <FaEnvelope size={18} />
             </span>
           </button>
-        </div>
+        </motion.div>
 
         {/* RIGHT STATS */}
-        <div className="flex justify-center">
+        <motion.div className="flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+        >
           <div className="bg-[#1b2028] rounded-[50px] p-8 w-[240px] space-y-8 shadow-xl">
             
             <div className="flex items-center gap-5">
@@ -147,7 +160,7 @@ const Hero = ( ) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
 
