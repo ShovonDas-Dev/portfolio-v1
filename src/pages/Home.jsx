@@ -4,6 +4,7 @@ import AboutMe from '../component/home/AboutMe'
 import Skills from "../component/home/Skills"
 import ProjectsSection from '../component/home/ProjectsSection'
 import SectionHeader from '../assets/SectionHeader'
+import ContactForm from '../component/home/ContactForm'
 
 const Home = () => {
   return (
@@ -26,6 +27,9 @@ const Home = () => {
         <ProjectsSection/>
       </SectionHeader>
      
+    </section>
+    <section>
+      <ContactForm/>
     </section>
     
 </>

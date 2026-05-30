@@ -19,7 +19,7 @@ const Hero = ( ) => {
     
   return (
     <section>
-    <section className="pt-20 md:pt-20 min-h-screen bg-[#262c36] text-white flex items-center justify-center px-6 py-10">
+    <section className="pt-20 md:pt-20 min-h-screen bg-bg1 text-white flex items-center justify-center px-6 py-10">
       <div className="max-w-8xl w-full grid lg:grid-cols-3 gap-10 md:gap-0 items-center">
         
         {/* LEFT CARD */}
