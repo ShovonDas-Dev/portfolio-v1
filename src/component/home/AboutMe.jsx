@@ -2,7 +2,10 @@
 import SectionHeader from "@/assets/SectionHeader";
 import AboutMeBg from "../../../public/CV/image/AboutMeBg.png";
 import { motion } from "framer-motion";
+import AboutData from "../../Data/AboutData";
+
 const AboutMe = () => {
+
   // টপোগ্রাফিক ব্যাকগ্রাউন্ডের জন্য একটি ক্লিন SVG প্যাটার্ন (Base64)
   const topoBackground = {
     backgroundImage: `url(${AboutMeBg})`,
@@ -15,6 +18,9 @@ const AboutMe = () => {
       style={topoBackground} 
       className="relative min-h-screen bg-center bg-cover bg-[#111622] text-gray-300 py-16 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
+        <div className="absolute inset-0">
+
+      </div>
       
      <SectionHeader>
 
@@ -41,23 +47,11 @@ const AboutMe = () => {
             <div className="pl-4 space-y-4 text-gray-300">
               <h3 className="text-[#00ffcc] text-2xl font-sans font-bold tracking-wide">Hello!</h3>
               
-              <p>
-                My name is <span className="text-[#00ffcc] font-bold">Sinan</span> and I specialize in web development that utilizes{' '}
-                <span className="text-[#00ffcc]">HTML</span>, <span className="text-[#00ffcc]">CSS</span>,{' '}
-                <span className="text-[#00ffcc]">JS</span>, and <span className="text-[#00ffcc]">REACT</span> etc.
+              <p className="text-lg">
+                {AboutData.discription}
               </p>
               
-              <p>
-                I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
-              </p>
               
-              <p>
-                When I'm not coding, I am <span className="text-[#00ffcc] underline decoration-wavy">writing blogs</span>, reading, or picking up some new hands-on art project like <span className="text-[#00ffcc]">photography</span>.
-              </p>
-              
-              <p>
-                I like to have my perspective and belief systems challenged so that I see the world through new eyes.
-              </p>
             </div>
 
             {/* ক্লোজিং ট্যাগ */}

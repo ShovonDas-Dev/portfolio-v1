@@ -26,22 +26,10 @@ const Skills = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 1, ease: "easeOut" }}
           className="flex justify-center">
-            <div>
-              <motion.img
-                src={CodeLogo}
-                alt="Code Logo"
-                className="w-15 h-15 md:w-40 md:h-40  absolute sm:relative rounded-full flex items-center justify-center "
-                animate={{
-                  y: [0, -20, 0] 
-                }}
-                transition={{
-                  duration: 2, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-              />
+            
+            <div className="pt-10">
+              <OrbitalAnimation />
             </div>
-            <OrbitalAnimation />
           </motion.div>
 
           {/* RIGHT SIDE - SKILLS */}

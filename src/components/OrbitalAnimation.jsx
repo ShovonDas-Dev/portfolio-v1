@@ -7,6 +7,7 @@ import ReactLogo from "../assets/OrbitLogo/ReactLogo.svg";
 import NodeLogo from "../assets/OrbitLogo/Node.png";
 import MongoDBLogo from "../assets/OrbitLogo/MongoDB_idxmboBE0D_0.svg";
 import ExpressLogo from "../assets/OrbitLogo/Express.com.png";
+import CodeLogo from "../assets/OrbitLogo/CodeLogo.png";
 
 const LOGO_PATHS = {
   nextjs: NextjsLogo,
@@ -15,6 +16,7 @@ const LOGO_PATHS = {
   mongodb: MongoDBLogo,
   express: ExpressLogo,
   tailwind: TailwindLogo,
+  code: CodeLogo,
 };
 
 // Responsive scaling (important part)
@@ -48,10 +50,17 @@ const orbits = [
 const OrbitalAnimation = () => {
   return (
     <div className="flex items-center justify-center w-full  overflow-hidden">
-      <div className="relative w-[320px] sm:w-[420px] md:w-[520px] aspect-square flex items-center justify-center">
+      <div className="relative w-[800px] sm:w-[420px] md:w-[520px] aspect-square flex items-center justify-center">
 
         {/* Center Node */}
-        <div className="absolute w-10 h-10 sm:w-15 sm:h-15 bg-black rounded-full border border-gray-700 flex items-center justify-center z-10 shadow-lg" />
+        
+        <div className="absolute w-10 h-10 sm:w-15 sm:h-15 bg- rounded-full border border-gray-700 flex items-center justify-center z-10 shadow-lg" >
+          <img
+            src={LOGO_PATHS.code}
+            alt="Code Logo"
+            className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+          />
+        </div>
 
         {/* Orbits */}
         {orbits.map((orbit, index) => (

@@ -12,9 +12,10 @@ const shovonData = [
         hero: {
             name: "Shovon",
             image: "https://i.ibb.co/7QpKsCX/avatar.png",
-            title: "Full-Stack Developer",
-            h1: "Hey, I’m Shovon, Full-Stack Developer",
-            p:"I help business grow by crafting amazing web experiences. If you’re looking for a developer that likes to get stuff done, you’re in the right place.",
+            title: "MERN Stack Developer",
+            
+            description:"MERN Stack Developer | Building scalable web applications where robust backend architecture meets seamless user experiences. Passionate about creating fast, secure, and impactful digital solutions using MongoDB, Express.js, React, and Node.js.",
+            
             email:"shovondas086@gmail.com",
             loacation:"Dhaka, Bangladesh",
             number:"+8801885944096",

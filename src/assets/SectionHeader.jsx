@@ -20,12 +20,10 @@ const SectionHeader = ({ title, subtitle, children }) => {
     <motion.div
       ref={sectionRef}
       className="section-header"
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+     
     >
 
-      <div className="pt-4 flex flex-col items-center">
+      <div className="flex flex-col items-center">
 
         {/* Scroll Indicator */}
         <div className="relative h-[160px] flex flex-col items-center">
