@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import NextjsLogo from "../assets/OrbitLogo/nextjs.svg";
-import TailwindLogo from "../assets/OrbitLogo/tailwind.svg";
+import NextjsLogo from "../assets/OrbitLogo/Nextjs.svg";
+import TailwindLogo from "../assets/OrbitLogo/Tailwind.svg";
 import ReactLogo from "../assets/OrbitLogo/ReactLogo.svg";
 import NodeLogo from "../assets/OrbitLogo/Node.png";
 import MongoDBLogo from "../assets/OrbitLogo/MongoDB_idxmboBE0D_0.svg";
